@@ -55,12 +55,16 @@ class AuthController {
             // Lấy danh sách các quyền được chọn (UC1 -> UC5)
             $this->user->permissions = isset($_POST['permissions']) ? $_POST['permissions'] : [];
 
-            if ($this->user->register()) {
+            $result = $this->user->register();
+            if ($result === true) {
                 $success = "Đăng ký thành công! Vui lòng đăng nhập.";
                 require_once '../views/auth/login.php'; // Quay lại trang login
+                exit();
             } else {
-                $error = "Đăng ký thất bại. Email có thể đã tồn tại.";
+                // Nếu lỗi do trùng email/username, $result sẽ là câu thông báo lỗi
+                $error = is_string($result) ? $result : "Đăng ký thất bại.";
                 require_once '../views/auth/login.php';
+                exit();
             }
         }
     }

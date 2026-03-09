@@ -14,6 +14,7 @@
         <main class="main-content">
             <div class="list-header">
                 <div>
+                    <a href="javascript:history.back()" class="back-btn" style="display:inline-block; margin-bottom:10px; color:#666; text-decoration:none; font-weight:bold;"><i class="fas fa-arrow-left"></i> Quay lại</a>
                     <h1>DANH SÁCH SẢN PHẨM</h1>
                     <p>Quản lý kho hàng hiện tại</p>
                 </div>

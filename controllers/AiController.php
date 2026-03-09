@@ -5,18 +5,16 @@ class AiController {
     public function chat() {
         $message = $_POST['message'] ?? '';
         
-        // Sử dụng Key Minh đã lấy được từ image_29536e.png
-        $apiKey = "AIzaSyDUaQEqXrTQVnW3WDH00TLW6Q9HsyX7G1s"; 
+        // Sử dụng API Key mới Minh vừa cung cấp
+        $apiKey = "AIzaSyAqwzhPCKYRwgTeelz07iOu4jXRPanHzcM"; 
         
-        // CẬP NHẬT: Sử dụng Gemini 3 Pro Preview - Model mạnh nhất hiện tại
-        // Lưu ý: gemini-pro-latest hiện đã trỏ thẳng về gemini-3-pro-preview
-        $url = "https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=dxdxAIzaSyDUaQEqXrTQVnW3WDH00TLW6Q9HsyX7G1s" . $apiKey;
+        // CẬP NHẬT: Sử dụng v1beta để hỗ trợ đầy đủ Gemini 1.5 Flash
+        $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" . $apiKey;
 
         $data = [
             "contents" => [
                 ["parts" => [["text" => $message]]]
             ],
-            // Gemini 3 hỗ trợ 'thinking_level' để trả lời thông minh hơn
             "generationConfig" => [
                 "temperature" => 0.7,
                 "topK" => 40,
@@ -46,8 +44,8 @@ class AiController {
             return;
         }
 
-        // Trích xuất phản hồi từ Gemini 3
-        $answer = $result['candidates'][0]['content']['parts'][0]['text'] ?? "Gemini 3 đang bận suy nghĩ, hãy thử lại!";
+        // Trích xuất phản hồi từ Gemini
+        $answer = $result['candidates'][0]['content']['parts'][0]['text'] ?? "Gemini đang bận suy nghĩ, hãy thử lại!";
         
         echo json_encode(['answer' => $answer]);
         exit(); 

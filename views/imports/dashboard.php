@@ -12,8 +12,11 @@
         
         <main class="main-content">
             <div class="list-header">
-                <h1>QUẢN LÝ NHẬP HÀNG (UC2)</h1>
-                <p>kim ji-won</p>
+                <div>
+                    <a href="javascript:history.back()" class="back-btn" style="display:inline-block; margin-bottom:10px; color:#666; text-decoration:none; font-weight:bold;"><i class="fas fa-arrow-left"></i> Quay lại</a>
+                    <h1>QUẢN LÝ NHẬP HÀNG (UC2)</h1>
+                    <p>kim ji-won</p>
+                </div>
             </div>
 
             <div class="card-grid">

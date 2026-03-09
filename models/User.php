@@ -36,8 +36,16 @@ class User {
         $stmt->bindParam(":password", $password_hash);
         $stmt->bindParam(":permissions", $permissions_json);
 
-        if($stmt->execute()) {
-            return true;
+        try {
+            if($stmt->execute()) {
+                return true;
+            }
+        } catch (PDOException $e) {
+            // 23000 là mã lỗi Integrity constraint violation (UNIQUE)
+            if ($e->getCode() == 23000) {
+                return "Tên đăng nhập hoặc Email đã tồn tại. Vui lòng chọn tài khoản khác!";
+            }
+            return false;
         }
         return false;
     }

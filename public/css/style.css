@@ -24,7 +24,8 @@ body {
 /* Phần Brand bên trái */
 .brand-section {
     flex: 1;
-    background-color: #f5f5f5; /* Màu xám nhẹ đặc trưng background studio */
+    background-color: #f5f5f5;
+    /* Màu xám nhẹ đặc trưng background studio */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,7 +35,8 @@ body {
 }
 
 .brand-content h1 {
-    font-family: 'Oswald', sans-serif; /* Font tiêu đề đậm, cao */
+    font-family: 'Oswald', sans-serif;
+    /* Font tiêu đề đậm, cao */
     font-size: 5rem;
     line-height: 1;
     text-transform: uppercase;
@@ -57,8 +59,10 @@ body {
 .hero-image img {
     max-width: 80%;
     height: auto;
-    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.2)); /* Tạo bóng đổ 3D */
-    transform: rotate(-15deg); /* Nghiêng nhẹ tạo cảm giác động */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+    /* Tạo bóng đổ 3D */
+    transform: rotate(-15deg);
+    /* Nghiêng nhẹ tạo cảm giác động */
 }
 
 /* Phần Form bên phải */
@@ -158,26 +162,32 @@ body {
     text-decoration: none;
     font-size: 0.85rem;
 }
+
 /* --- DASHBOARD STYLE --- */
 .dashboard-container {
     display: flex;
     height: 100vh;
     background-color: #f4f4f4;
-    width: 100%; /* Đảm bảo full màn hình */
+    width: 100%;
+    /* Đảm bảo full màn hình */
 }
 
 /* --- NEW PREMIUM SIDEBAR STYLE --- */
 
 .sidebar {
-    width: 280px; /* Rộng hơn chút cho thoáng */
-    background-color: #0a0a0a; /* Đen sâu thẳm */
+    width: 280px;
+    /* Rộng hơn chút cho thoáng */
+    background-color: #0a0a0a;
+    /* Đen sâu thẳm */
     color: #fff;
     display: flex;
     flex-direction: column;
     padding: 25px;
-    border-right: 1px solid #222; /* Viền mờ ngăn cách */
+    border-right: 1px solid #222;
+    /* Viền mờ ngăn cách */
     height: 100vh;
-    position: fixed; /* Cố định sidebar để cuộn nội dung bên phải */
+    position: fixed;
+    /* Cố định sidebar để cuộn nội dung bên phải */
     left: 0;
     top: 0;
     z-index: 100;
@@ -185,10 +195,11 @@ body {
 
 /* Đẩy nội dung chính sang phải để không bị Sidebar che mất */
 .main-content {
-    margin-left: 280px; 
+    margin-left: 280px;
     flex: 1;
     padding: 40px;
-    background-color: #f8f9fa; /* Màu nền sáng nhẹ cho content */
+    background-color: #f8f9fa;
+    /* Màu nền sáng nhẹ cho content */
 }
 
 /* 1. BRAND BOX */
@@ -203,7 +214,8 @@ body {
 
 .brand-icon {
     font-size: 2rem;
-    color: #fff; /* Trắng tinh */
+    color: #fff;
+    /* Trắng tinh */
 }
 
 .brand-text h2 {
@@ -218,7 +230,8 @@ body {
 .brand-text p {
     font-family: 'Roboto', sans-serif;
     font-size: 0.7rem;
-    color: #666; /* Xám tối */
+    color: #666;
+    /* Xám tối */
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 700;
@@ -230,7 +243,8 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    background: #161616; /* Nền xám rất tối để làm nổi user */
+    background: #161616;
+    /* Nền xám rất tối để làm nổi user */
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 30px;
@@ -258,17 +272,28 @@ body {
     right: 0;
     width: 12px;
     height: 12px;
-    background-color: #00e676; /* Xanh lá neon */
-    border: 2px solid #161616; /* Viền trùng màu nền để cắt hình */
+    background-color: #00e676;
+    /* Xanh lá neon */
+    border: 2px solid #161616;
+    /* Viền trùng màu nền để cắt hình */
     border-radius: 50%;
 }
 
 /* Hiệu ứng nhấp nháy cho chấm xanh */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
-    70% { box-shadow: 0 0 0 6px rgba(0, 230, 118, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(0, 230, 118, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+    }
 }
+
 .pulse {
     animation: pulse 2s infinite;
 }
@@ -292,7 +317,8 @@ body {
 
 .status-text {
     font-size: 0.65rem;
-    color: #00e676; /* Chữ xanh đồng bộ với chấm */
+    color: #00e676;
+    /* Chữ xanh đồng bộ với chấm */
     margin-top: 2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -321,22 +347,30 @@ body {
 }
 
 .menu-item i {
-    width: 25px; /* Cố định chiều rộng icon để chữ thẳng hàng */
+    width: 25px;
+    /* Cố định chiều rộng icon để chữ thẳng hàng */
     font-size: 1.1rem;
 }
 
 /* Hover effect */
-.menu-item:hover, .menu-item.active {
-    background-color: #fff; /* Đảo ngược màu: Nền trắng */
-    color: #000; /* Chữ đen */
-    transform: translateX(5px); /* Trượt nhẹ sang phải */
-    box-shadow: 0 4px 15px rgba(255,255,255,0.1); /* Bóng sáng */
+.menu-item:hover,
+.menu-item.active {
+    background-color: #fff;
+    /* Đảo ngược màu: Nền trắng */
+    color: #000;
+    /* Chữ đen */
+    transform: translateX(5px);
+    /* Trượt nhẹ sang phải */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    /* Bóng sáng */
 }
 
 .menu-item.logout {
-    margin-top: auto; /* Đẩy xuống đáy nếu container dùng flex column */
+    margin-top: auto;
+    /* Đẩy xuống đáy nếu container dùng flex column */
     color: #ff4d4d;
 }
+
 .menu-item.logout:hover {
     background-color: #ff4d4d;
     color: #fff;
@@ -362,7 +396,8 @@ body {
 /* Grid các thẻ chức năng */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động chia cột */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Tự động chia cột */
     gap: 30px;
 }
 
@@ -383,7 +418,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
     transform: translateY(-5px);
     border-bottom: 5px solid #000;
 }
@@ -411,12 +446,15 @@ body {
     color: #fff;
 }
 
-.admin-card .card-icon, .admin-card p {
+.admin-card .card-icon,
+.admin-card p {
     color: #ccc;
 }
+
 .admin-card:hover {
     border-bottom: 5px solid #fff;
 }
+
 /* Module Header Style */
 .module-header {
     display: flex;
@@ -459,6 +497,7 @@ body {
     color: #777;
     margin: 0;
 }
+
 /* --- DATA TABLE STYLE (Thêm vào cuối file style.css) --- */
 
 /* Header chứa Tiêu đề và Nút thêm */
@@ -468,6 +507,7 @@ body {
     align-items: center;
     margin-bottom: 30px;
 }
+
 .list-header h1 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -479,7 +519,7 @@ body {
 .table-container {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
 }
 
@@ -495,6 +535,7 @@ body {
     background-color: #000;
     color: #fff;
 }
+
 .nike-table th {
     padding: 15px 20px;
     text-align: left;
@@ -513,6 +554,7 @@ body {
     font-size: 0.95rem;
     vertical-align: middle;
 }
+
 .nike-table tr:hover {
     background-color: #f9f9f9;
 }
@@ -524,6 +566,7 @@ body {
     gap: 10px;
     font-weight: 500;
 }
+
 .p-img {
     width: 30px;
     height: 30px;
@@ -536,8 +579,13 @@ body {
 }
 
 /* Màu trạng thái tồn kho */
-.text-danger { color: #e74c3c; }
-.text-success { color: #27ae60; }
+.text-danger {
+    color: #e74c3c;
+}
+
+.text-success {
+    color: #27ae60;
+}
 
 /* Nút thao tác nhỏ (Sửa/Xóa) */
 .action-btn {
@@ -552,14 +600,17 @@ body {
     margin-right: 5px;
     background: #f0f0f0;
 }
+
 .action-btn:hover {
     background-color: #000;
     color: #fff;
 }
+
 .action-btn.delete:hover {
     background-color: #ff4d4d;
     color: #fff;
 }
+
 /* --- 6. MODAL POPUP MODERN STYLE (Thay thế đoạn cũ) --- */
 
 .modal-overlay {
@@ -570,7 +621,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /* Nền tối hơn chút cho tập trung */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Nền tối hơn chút cho tập trung */
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
@@ -579,17 +631,26 @@ body {
 .modal-content {
     background-color: #fff;
     padding: 40px;
-    border-radius: 16px; /* Bo góc mềm mại hơn */
+    border-radius: 16px;
+    /* Bo góc mềm mại hơn */
     width: 95%;
-    max-width: 700px; /* Form gọn gàng */
+    max-width: 700px;
+    /* Form gọn gàng */
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     position: relative;
     animation: slideUp 0.3s ease-out;
 }
 
 @keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .close-btn {
@@ -602,23 +663,62 @@ body {
     transition: 0.2s;
     line-height: 1;
 }
-.close-btn:hover { color: #000; }
 
-.modal-header { margin-bottom: 30px; text-align: center; }
-.modal-header h2 { font-family: 'Oswald'; font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; }
-.modal-header p { color: #666; font-size: 0.9rem; }
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-family: 'Oswald';
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.modal-header p {
+    color: #666;
+    font-size: 0.9rem;
+}
 
 /* --- Form Layout --- */
-.modern-form { display: flex; flex-direction: column; gap: 20px; }
+.modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 /* Chia cột thông minh */
-.form-grid-row { display: flex; gap: 20px; }
-.form-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.form-grid-row {
+    display: flex;
+    gap: 20px;
+}
 
-.col-1 { flex: 1; }
-.col-2 { flex: 2; } /* Ô này rộng gấp đôi */
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
 
-.form-group { display: flex; flex-direction: column; }
+.col-1 {
+    flex: 1;
+}
+
+.col-2 {
+    flex: 2;
+}
+
+/* Ô này rộng gấp đôi */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
 .form-group label {
     font-size: 0.75rem;
     font-weight: 700;
@@ -631,8 +731,10 @@ body {
 /* Input style đẹp */
 /* Tìm đoạn này trong phần MODAL STYLE ở cuối file và sửa lại */
 
-.form-group input, .form-group select {
-    width: 100%; /* <--- QUAN TRỌNG: Thêm dòng này để không bị lệch khung */
+.form-group input,
+.form-group select {
+    width: 100%;
+    /* <--- QUAN TRỌNG: Thêm dòng này để không bị lệch khung */
     padding: 12px 15px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -641,18 +743,28 @@ body {
     transition: all 0.2s;
     font-family: 'Roboto', sans-serif;
     outline: none;
-    box-sizing: border-box; /* Đảm bảo padding không làm to ô input */
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm to ô input */
 }
 
-.form-group input:focus, .form-group select:focus {
+.form-group input:focus,
+.form-group select:focus {
     background-color: #fff;
     border-color: #000;
-    box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
 /* Tùy chỉnh Select box */
-.select-wrapper { position: relative; }
-.select-wrapper select { width: 100%; appearance: none; cursor: pointer; }
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    appearance: none;
+    cursor: pointer;
+}
+
 .select-wrapper i {
     position: absolute;
     right: 15px;
@@ -668,7 +780,8 @@ body {
     margin-top: 10px;
     display: flex;
     gap: 15px;
-    justify-content: flex-end; /* Đẩy nút sang phải */
+    justify-content: flex-end;
+    /* Đẩy nút sang phải */
 }
 
 .btn-gray {
@@ -681,12 +794,17 @@ body {
     cursor: pointer;
     font-family: 'Oswald', sans-serif;
 }
-.btn-gray:hover { background: #ddd; }
+
+.btn-gray:hover {
+    background: #ddd;
+}
 
 .btn-black {
-    border-radius: 6px; /* Bo góc nút đen luôn cho đồng bộ */
+    border-radius: 6px;
+    /* Bo góc nút đen luôn cho đồng bộ */
     padding: 12px 30px;
 }
+
 .badge-code {
     background: #000;
     color: #fff;

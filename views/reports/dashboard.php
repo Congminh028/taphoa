@@ -25,20 +25,20 @@
                 
                 <a href="index.php?action=report_revenue" class="card" style="border-left: 5px solid #000;">
                     <div class="card-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>DOANH THU & TIỀN MẶT</h3>
-                    <p>Dòng tiền vào/ra theo ngày, tháng</p>
+                    <h3>BÁO CÁO THỐNG KÊ DOANH THU</h3>
+                    <p>Theo thời gian (ngày/tháng/năm)</p>
                 </a>
 
                 <a href="index.php?action=report_profit" class="card">
                     <div class="card-icon"><i class="fas fa-hand-holding-usd"></i></div>
-                    <h3>LỢI NHUẬN (LÃI/LỖ)</h3>
-                    <p>Tính toán sau khi trừ giá vốn</p>
+                    <h3>PHÂN TÍCH DANH SÁCH MẶT HÀNG BÁN CHẠY</h3>
+                    <p>Thống kê số lượng bán ra</p>
                 </a>
 
                 <a href="index.php?action=report_products" class="card">
-                    <div class="card-icon"><i class="fas fa-crown"></i></div>
-                    <h3>TOP SẢN PHẨM</h3>
-                    <p>Mặt hàng bán chạy nhất & Tồn kho</p>
+                    <div class="card-icon"><i class="fas fa-boxes"></i></div>
+                    <h3>THỐNG KÊ GIÁ TRỊ HÀNG TỒN KHO HIỆN TẠI</h3>
+                    <p>Số lượng và Giá trị tồn kho</p>
                 </a>
 
             </div>

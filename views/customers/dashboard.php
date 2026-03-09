@@ -22,24 +22,33 @@
             </header>
 
             <div class="card-grid">
+                <?php 
+                if (!function_exists('hasPerm')) {
+                    function hasPerm($p, $perms) {
+                        return in_array('ADMIN', $perms) || in_array($p, $perms);
+                    }
+                }
+                ?>
                 
                 <a href="index.php?action=customer_list" class="card">
                     <div class="card-icon"><i class="fas fa-address-book"></i></div>
-                    <h3>DANH SÁCH KHÁCH HÀNG</h3>
+                    <h3>QUẢN LÝ HỒ SƠ KHÁCH HÀNG</h3>
                     <p>Thông tin, Lịch sử mua hàng</p>
                 </a>
 
                 <a href="index.php?action=loyalty" class="card">
                     <div class="card-icon"><i class="fas fa-star"></i></div>
-                    <h3>HẠNG THÀNH VIÊN</h3>
+                    <h3>TRA CỨU LỊCH SỬ GIAO DỊCH</h3>
                     <p>Quản lý điểm tích lũy & Nâng hạng</p>
                 </a>
 
                 <a href="index.php?action=vouchers" class="card">
                     <div class="card-icon"><i class="fas fa-ticket-alt"></i></div>
-                    <h3>KHUYẾN MÃI</h3>
+                    <h3>QUẢN LÝ CHƯƠNG TRÌNH THÀNH VIÊN</h3>
                     <p>Tạo Voucher, Mã giảm giá</p>
                 </a>
+
+                <?php // Cấu hình hệ thống đã được chuyển vào mục Quản lý chương trình thành viên ?>
 
             </div>
         </main>

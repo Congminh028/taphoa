@@ -23,6 +23,7 @@
                 
                 <div class="list-header">
                     <div>
+                        <a href="javascript:history.back()" class="back-btn" style="display:inline-block; margin-bottom:10px; color:#666; text-decoration:none; font-weight:bold;"><i class="fas fa-arrow-left"></i> Quay lại</a>
                         <h1>PHIẾU KIỂM KHO</h1>
                         <p>Mã phiếu: <b style="color:#000"><?php echo $newCode; ?></b></p>
                         <input type="hidden" name="code" value="<?php echo $newCode; ?>">

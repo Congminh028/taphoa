@@ -14,6 +14,8 @@ require_once '../controllers/PosController.php';
 require_once '../controllers/CustomerController.php';
 require_once '../controllers/ReportController.php';
 require_once '../controllers/CashierController.php';
+require_once '../controllers/ChatController.php';
+
 // 2. Khởi tạo các đối tượng
 $action = $_GET['action'] ?? 'login';
 $cashierController = new CashierController();
@@ -26,6 +28,8 @@ $importController = new ImportController();
 $posController = new PosController();
 $customerController = new CustomerController();
 $reportController = new ReportController();
+$chatController = new ChatController();
+
 
 // 3. Router điều hướng
 switch ($action) {
@@ -35,6 +39,9 @@ switch ($action) {
         break;
     case 'login_submit':
         $authController->login_submit();
+        break;
+    case 'register_submit':
+        $authController->register_submit();
         break;
     case 'logout':
         $authController->logout();
@@ -91,11 +98,47 @@ switch ($action) {
     case 'pos':
         $posController->index();
         break;
+    case 'pos_history':
+        $posController->history();
+        break;
+    case 'pos_report':
+        $posController->report();
+        break;
     case 'customers':
         $customerController->index();
         break;
+    case 'customer_list':
+        $customerController->list();
+        break;
+    case 'customer_store':
+        $customerController->store();
+        break;
+    case 'customer_history':
+        $customerController->history();
+        break;
+    case 'loyalty':
+        $customerController->loyalty();
+        break;
+    case 'vouchers':
+        $customerController->vouchers();
+        break;
+    case 'settings':
+        $customerController->settings();
+        break;
+    case 'update_settings':
+        $customerController->updateSettings();
+        break;
     case 'reports':
         $reportController->index();
+        break;
+    case 'report_revenue':
+        $reportController->revenue();
+        break;
+    case 'report_profit':
+        $reportController->bestsellers(); // "Lợi nhuận" đổi thành bestsellers
+        break;
+    case 'report_products':
+        $reportController->inventoryValue(); // "Top sản phẩm" đổi thành tồn kho
         break;
     case 'imports':
         $importController->index(); // Vào Dashboard 3 nút
@@ -122,11 +165,23 @@ case 'supplier_store':
     case 'cashier_pos':      // Phải nằm TRÊN default
         $cashierController->pos();
         break;
+    case 'cashier_checkout':
+        $cashierController->processPayment();
+        break;
+    case 'order_history':
+        $cashierController->order_history();
+        break;
     case 'ask_ai':
         // Gọi đến một Controller mới hoặc xử lý trực tiếp ở đây
         require_once '../controllers/AiController.php';
         $aiController = new AiController();
         $aiController->chat();
+        break;
+    case 'send_chat_message':
+        $chatController->sendMessage();
+        break;
+    case 'get_chat_messages':
+        $chatController->getMessages();
         break;
     // --- MẶC ĐỊNH LUÔN NẰM CUỐI CÙNG ---
     default:
